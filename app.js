@@ -1,5 +1,5 @@
 // Initialize materialize
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var sideNavs = document.querySelectorAll('.sidenav');
     M.Sidenav.init(sideNavs, {});
 
@@ -17,31 +17,31 @@ document.addEventListener('DOMContentLoaded', function() {
         height: 275
     });
 
+    var slidersAndroid = document.querySelectorAll("#android");
+    M.Slider.init(slidersAndroid, {
+        height: 375
+    });
+
     var scrollspy = document.querySelectorAll('.scrollspy');
     M.ScrollSpy.init(scrollspy, {});
 
 });
 
 // scroll back to top
-window.onscroll = function()
-{
+window.onscroll = function () {
     scrollFunction();
 }
 
-function scrollFunction()
-{
-    if(document.body.scrollTop > 900 || document.documentElement.scrollTop > 900)
-    {
+function scrollFunction() {
+    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
         document.getElementById("btnTop").style.display = "block";
     }
-    else
-    {
+    else {
         document.getElementById("btnTop").style.display = "none";
     }
 }
 
-function backTop()
-{
+function backTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
